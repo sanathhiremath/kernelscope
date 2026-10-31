@@ -1,0 +1,660 @@
+{
+  "version": "0.1",
+  "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+  "torch": "2.9.0+cu126",
+  "cuda": "12.6",
+  "iterations": 10,
+  "repeats": 3,
+  "warmup": 5,
+  "seed": 42,
+  "trial_orders": [
+    [
+      "FP32 batch 4",
+      "FP16 batch 1",
+      "FP16 channels last batch 1",
+      "FP16 batch 4",
+      "FP32 batch 1",
+      "FP16 channels last batch 4"
+    ],
+    [
+      "FP32 batch 4",
+      "FP32 batch 1",
+      "FP16 channels last batch 1",
+      "FP16 batch 4",
+      "FP16 channels last batch 4",
+      "FP16 batch 1"
+    ],
+    [
+      "FP32 batch 4",
+      "FP16 batch 1",
+      "FP16 channels last batch 1",
+      "FP32 batch 1",
+      "FP16 batch 4",
+      "FP16 channels last batch 4"
+    ]
+  ],
+  "results": [
+    {
+      "samples_ms": [
+        40.31078338623047,
+        33.930240631103516,
+        36.2342414855957,
+        38.35891342163086,
+        35.43260955810547,
+        35.63014221191406,
+        36.567039489746094,
+        46.3370246887207,
+        39.72505569458008,
+        34.43209457397461,
+        33.91708755493164,
+        34.218849182128906,
+        40.89334487915039,
+        36.99302291870117,
+        35.63724899291992,
+        36.890625,
+        37.62995147705078,
+        41.34899139404297,
+        42.26457595825195,
+        35.87392044067383,
+        34.700286865234375,
+        35.73651123046875,
+        39.04512023925781,
+        42.0780143737793,
+        35.03615951538086,
+        41.34297561645508,
+        38.816768646240234,
+        36.000831604003906,
+        37.119998931884766,
+        37.12102508544922
+      ],
+      "trials": [
+        {
+          "repeat": 0,
+          "median_batch_ms": 36.4006404876709,
+          "median_synchronized_wall_ms": 36.42725001554936,
+          "peak_allocated_bytes": 47846912
+        },
+        {
+          "repeat": 1,
+          "median_batch_ms": 36.941823959350586,
+          "median_synchronized_wall_ms": 36.97794990148395,
+          "peak_allocated_bytes": 47846912
+        },
+        {
+          "repeat": 2,
+          "median_batch_ms": 37.12051200866699,
+          "median_synchronized_wall_ms": 37.157599930651486,
+          "peak_allocated_bytes": 47846912
+        }
+      ],
+      "name": "FP32 \u00b7 batch 1",
+      "variant": "FP32",
+      "batch_size": 1,
+      "median_batch_ms": 36.941823959350586,
+      "p95_batch_ms": 42.18062324523926,
+      "images_per_second": 27.069589230362933,
+      "peak_allocated_bytes": 47846912,
+      "numerical_gate_passed": true,
+      "detection_agreement": 1.0,
+      "detection_agreement_details": [
+        {
+          "reference_detections": 5,
+          "candidate_detections": 5,
+          "matched_detections": 5,
+          "preservation_f1": 1.0,
+          "mean_matched_iou": 1.0,
+          "max_matched_score_drift": 0.0,
+          "finite": true,
+          "passed": true,
+          "raw_outputs_finite": true
+        },
+        {
+          "reference_detections": 5,
+          "candidate_detections": 5,
+          "matched_detections": 5,
+          "preservation_f1": 1.0,
+          "mean_matched_iou": 1.0,
+          "max_matched_score_drift": 0.0,
+          "finite": true,
+          "passed": true,
+          "raw_outputs_finite": true
+        },
+        {
+          "reference_detections": 5,
+          "candidate_detections": 5,
+          "matched_detections": 5,
+          "preservation_f1": 1.0,
+          "mean_matched_iou": 1.0,
+          "max_matched_score_drift": 0.0,
+          "finite": true,
+          "passed": true,
+          "raw_outputs_finite": true
+        }
+      ]
+    },
+    {
+      "samples_ms": [
+        41.181312561035156,
+        48.67686462402344,
+        40.97126388549805,
+        61.42259216308594,
+        51.964927673339844,
+        40.37120056152344,
+        76.23382568359375,
+        60.548160552978516,
+        63.42176055908203,
+        41.5283203125,
+        35.40070343017578,
+        38.92121505737305,
+        34.751487731933594,
+        39.19686508178711,
+        36.9541130065918,
+        38.30476760864258,
+        44.58598327636719,
+        45.32838439941406,
+        37.189823150634766,
+        39.96876907348633,
+        44.937217712402344,
+        45.39187240600586,
+        45.02425765991211,
+        42.5615348815918,
+        44.067134857177734,
+        44.904449462890625,
+        50.23027038574219,
+        43.101470947265625,
+        39.342079162597656,
+        42.00572967529297
+      ],
+      "trials": [
+        {
+          "repeat": 0,
+          "median_batch_ms": 50.32089614868164,
+          "median_synchronized_wall_ms": 50.350300036370754,
+          "peak_allocated_bytes": 53411328
+        },
+        {
+          "repeat": 1,
+          "median_batch_ms": 38.61299133300781,
+          "median_synchronized_wall_ms": 38.64119993522763,
+          "peak_allocated_bytes": 53411328
+        },
+        {
+          "repeat": 2,
+          "median_batch_ms": 44.48579216003418,
+          "median_synchronized_wall_ms": 44.5140500087291,
+          "peak_allocated_bytes": 53411328
+        }
+      ],
+      "name": "FP16 \u00b7 batch 1",
+      "variant": "FP16",
+      "batch_size": 1,
+      "median_batch_ms": 42.83150291442871,
+      "p95_batch_ms": 62.52213478088378,
+      "images_per_second": 23.34730121419878,
+      "peak_allocated_bytes": 53411328,
+      "numerical_gate_passed": true,
+      "detection_agreement": 1.0,
+      "detection_agreement_details": [
+        {
+          "reference_detections": 5,
+          "candidate_detections": 5,
+          "matched_detections": 5,
+          "preservation_f1": 1.0,
+          "mean_matched_iou": 0.9973609244734609,
+          "max_matched_score_drift": 0.0031962990760803223,
+          "finite": true,
+          "passed": true,
+          "raw_outputs_finite": true
+        },
+        {
+          "reference_detections": 5,
+          "candidate_detections": 5,
+          "matched_detections": 5,
+          "preservation_f1": 1.0,
+          "mean_matched_iou": 0.9973609244734609,
+          "max_matched_score_drift": 0.0031962990760803223,
+          "finite": true,
+          "passed": true,
+          "raw_outputs_finite": true
+        },
+        {
+          "reference_detections": 5,
+          "candidate_detections": 5,
+          "matched_detections": 5,
+          "preservation_f1": 1.0,
+          "mean_matched_iou": 0.9973609244734609,
+          "max_matched_score_drift": 0.0031962990760803223,
+          "finite": true,
+          "passed": true,
+          "raw_outputs_finite": true
+        }
+      ]
+    },
+    {
+      "samples_ms": [
+        35.721248626708984,
+        45.97145462036133,
+        42.599422454833984,
+        36.92118453979492,
+        36.36735916137695,
+        39.86111831665039,
+        40.29235076904297,
+        37.8458251953125,
+        37.108734130859375,
+        37.47123336791992,
+        36.555904388427734,
+        34.9719352722168,
+        38.814430236816406,
+        35.23891067504883,
+        52.57721710205078,
+        35.7213134765625,
+        37.46015930175781,
+        40.42851257324219,
+        41.40524673461914,
+        36.06630325317383,
+        38.14380645751953,
+        33.44768142700195,
+        35.615840911865234,
+        42.96089553833008,
+        35.191871643066406,
+        40.78694534301758,
+        34.85276794433594,
+        34.196319580078125,
+        38.988033294677734,
+        35.946495056152344
+      ],
+      "trials": [
+        {
+          "repeat": 0,
+          "median_batch_ms": 37.65852928161621,
+          "median_synchronized_wall_ms": 37.685749935917556,
+          "peak_allocated_bytes": 53780480
+        },
+        {
+          "repeat": 1,
+          "median_batch_ms": 37.00803184509277,
+          "median_synchronized_wall_ms": 37.04119997564703,
+          "peak_allocated_bytes": 53780480
+        },
+        {
+          "repeat": 2,
+          "median_batch_ms": 35.78116798400879,
+          "median_synchronized_wall_ms": 35.81274999305606,
+          "peak_allocated_bytes": 53780480
+        }
+      ],
+      "name": "FP16 channels last \u00b7 batch 1",
+      "variant": "FP16 channels last",
+      "batch_size": 1,
+      "median_batch_ms": 37.284446716308594,
+      "p95_batch_ms": 44.61670303344726,
+      "images_per_second": 26.820835175826545,
+      "peak_allocated_bytes": 53780480,
+      "numerical_gate_passed": true,
+      "detection_agreement": 1.0,
+      "detection_agreement_details": [
+        {
+          "reference_detections": 5,
+          "candidate_detections": 5,
+          "matched_detections": 5,
+          "preservation_f1": 1.0,
+          "mean_matched_iou": 0.9973294891185782,
+          "max_matched_score_drift": 0.0014356374740600586,
+          "finite": true,
+          "passed": true,
+          "raw_outputs_finite": true
+        },
+        {
+          "reference_detections": 5,
+          "candidate_detections": 5,
+          "matched_detections": 5,
+          "preservation_f1": 1.0,
+          "mean_matched_iou": 0.9973294891185782,
+          "max_matched_score_drift": 0.0014356374740600586,
+          "finite": true,
+          "passed": true,
+          "raw_outputs_finite": true
+        },
+        {
+          "reference_detections": 5,
+          "candidate_detections": 5,
+          "matched_detections": 5,
+          "preservation_f1": 1.0,
+          "mean_matched_iou": 0.9973294891185782,
+          "max_matched_score_drift": 0.0014356374740600586,
+          "finite": true,
+          "passed": true,
+          "raw_outputs_finite": true
+        }
+      ]
+    },
+    {
+      "samples_ms": [
+        173.58041381835938,
+        144.96885681152344,
+        140.82867431640625,
+        127.6600341796875,
+        125.9295654296875,
+        157.8065948486328,
+        142.00933837890625,
+        139.84780883789062,
+        161.5851593017578,
+        150.28121948242188,
+        112.74336242675781,
+        133.76400756835938,
+        123.69510650634766,
+        114.18418884277344,
+        118.53510284423828,
+        133.9014434814453,
+        122.81660461425781,
+        114.68988800048828,
+        118.41923522949219,
+        119.37996673583984,
+        146.05824279785156,
+        132.37855529785156,
+        120.12432098388672,
+        129.8043212890625,
+        118.86473846435547,
+        129.8892822265625,
+        125.2495346069336,
+        132.6551055908203,
+        117.42835235595703,
+        179.9208984375
+      ],
+      "trials": [
+        {
+          "repeat": 0,
+          "median_batch_ms": 143.48909759521484,
+          "median_synchronized_wall_ms": 143.52199994027615,
+          "peak_allocated_bytes": 91083264
+        },
+        {
+          "repeat": 1,
+          "median_batch_ms": 118.95753479003906,
+          "median_synchronized_wall_ms": 118.9864999614656,
+          "peak_allocated_bytes": 91083264
+        },
+        {
+          "repeat": 2,
+          "median_batch_ms": 129.8468017578125,
+          "median_synchronized_wall_ms": 129.8853000625968,
+          "peak_allocated_bytes": 91083264
+        }
+      ],
+      "name": "FP32 \u00b7 batch 4",
+      "variant": "FP32",
+      "batch_size": 4,
+      "median_batch_ms": 129.8468017578125,
+      "p95_batch_ms": 168.18254928588863,
+      "images_per_second": 30.805533489078268,
+      "peak_allocated_bytes": 91083264,
+      "numerical_gate_passed": true,
+      "detection_agreement": 1.0,
+      "detection_agreement_details": [
+        {
+          "reference_detections": 20,
+          "candidate_detections": 20,
+          "matched_detections": 20,
+          "preservation_f1": 1.0,
+          "mean_matched_iou": 1.0,
+          "max_matched_score_drift": 0.0,
+          "finite": true,
+          "passed": true,
+          "raw_outputs_finite": true
+        },
+        {
+          "reference_detections": 20,
+          "candidate_detections": 20,
+          "matched_detections": 20,
+          "preservation_f1": 1.0,
+          "mean_matched_iou": 1.0,
+          "max_matched_score_drift": 0.0,
+          "finite": true,
+          "passed": true,
+          "raw_outputs_finite": true
+        },
+        {
+          "reference_detections": 20,
+          "candidate_detections": 20,
+          "matched_detections": 20,
+          "preservation_f1": 1.0,
+          "mean_matched_iou": 1.0,
+          "max_matched_score_drift": 0.0,
+          "finite": true,
+          "passed": true,
+          "raw_outputs_finite": true
+        }
+      ]
+    },
+    {
+      "samples_ms": [
+        124.01628875732422,
+        128.66064453125,
+        144.3573455810547,
+        127.95209503173828,
+        123.62332916259766,
+        134.2308807373047,
+        124.49372863769531,
+        129.0188751220703,
+        119.15161895751953,
+        121.1164779663086,
+        123.04281616210938,
+        124.20710754394531,
+        115.91295623779297,
+        130.50778198242188,
+        121.1685791015625,
+        118.51583862304688,
+        140.6249542236328,
+        114.98397064208984,
+        123.98159790039062,
+        122.8912353515625,
+        134.6150360107422,
+        136.7110137939453,
+        137.08714294433594,
+        150.19190979003906,
+        122.30860900878906,
+        120.91801452636719,
+        123.09584045410156,
+        122.69602966308594,
+        126.0390396118164,
+        134.36927795410156
+      ],
+      "trials": [
+        {
+          "repeat": 0,
+          "median_batch_ms": 126.2229118347168,
+          "median_synchronized_wall_ms": 126.25530001241714,
+          "peak_allocated_bytes": 66328064
+        },
+        {
+          "repeat": 1,
+          "median_batch_ms": 122.96702575683594,
+          "median_synchronized_wall_ms": 122.99840000923723,
+          "peak_allocated_bytes": 66328064
+        },
+        {
+          "repeat": 2,
+          "median_batch_ms": 130.20415878295898,
+          "median_synchronized_wall_ms": 130.23154996335506,
+          "peak_allocated_bytes": 66328064
+        }
+      ],
+      "name": "FP16 \u00b7 batch 4",
+      "variant": "FP16",
+      "batch_size": 4,
+      "median_batch_ms": 124.11169815063477,
+      "p95_batch_ms": 142.67776947021483,
+      "images_per_second": 32.22903287605643,
+      "peak_allocated_bytes": 66328064,
+      "numerical_gate_passed": true,
+      "detection_agreement": 1.0,
+      "detection_agreement_details": [
+        {
+          "reference_detections": 20,
+          "candidate_detections": 20,
+          "matched_detections": 20,
+          "preservation_f1": 1.0,
+          "mean_matched_iou": 0.9967687965807281,
+          "max_matched_score_drift": 0.0016962289810180664,
+          "finite": true,
+          "passed": true,
+          "raw_outputs_finite": true
+        },
+        {
+          "reference_detections": 20,
+          "candidate_detections": 20,
+          "matched_detections": 20,
+          "preservation_f1": 1.0,
+          "mean_matched_iou": 0.9967687965807281,
+          "max_matched_score_drift": 0.0016962289810180664,
+          "finite": true,
+          "passed": true,
+          "raw_outputs_finite": true
+        },
+        {
+          "reference_detections": 20,
+          "candidate_detections": 20,
+          "matched_detections": 20,
+          "preservation_f1": 1.0,
+          "mean_matched_iou": 0.9967687965807281,
+          "max_matched_score_drift": 0.0016962289810180664,
+          "finite": true,
+          "passed": true,
+          "raw_outputs_finite": true
+        }
+      ]
+    },
+    {
+      "samples_ms": [
+        122.71171569824219,
+        118.96240234375,
+        117.285888671875,
+        112.08905792236328,
+        127.34553527832031,
+        117.62687683105469,
+        122.81769561767578,
+        120.54198455810547,
+        122.54617309570312,
+        143.4019775390625,
+        120.33452606201172,
+        124.98738861083984,
+        117.91059112548828,
+        115.48844909667969,
+        125.31916809082031,
+        121.31964874267578,
+        127.4408950805664,
+        118.54854583740234,
+        119.10950469970703,
+        140.05145263671875,
+        119.97593688964844,
+        122.41817474365234,
+        144.87347412109375,
+        125.1328353881836,
+        120.60073852539062,
+        129.39564514160156,
+        126.08921813964844,
+        116.33356475830078,
+        129.36399841308594,
+        122.22361755371094
+      ],
+      "trials": [
+        {
+          "repeat": 0,
+          "median_batch_ms": 121.5440788269043,
+          "median_synchronized_wall_ms": 121.57129996921867,
+          "peak_allocated_bytes": 72536064
+        },
+        {
+          "repeat": 1,
+          "median_batch_ms": 120.82708740234375,
+          "median_synchronized_wall_ms": 120.86010014172643,
+          "peak_allocated_bytes": 72536064
+        },
+        {
+          "repeat": 2,
+          "median_batch_ms": 123.77550506591797,
+          "median_synchronized_wall_ms": 123.80285002291203,
+          "peak_allocated_bytes": 72536064
+        }
+      ],
+      "name": "FP16 channels last \u00b7 batch 4",
+      "variant": "FP16 channels last",
+      "batch_size": 4,
+      "median_batch_ms": 122.32089614868164,
+      "p95_batch_ms": 141.8942413330078,
+      "images_per_second": 32.70087226256077,
+      "peak_allocated_bytes": 72536064,
+      "numerical_gate_passed": true,
+      "detection_agreement": 1.0,
+      "detection_agreement_details": [
+        {
+          "reference_detections": 20,
+          "candidate_detections": 20,
+          "matched_detections": 20,
+          "preservation_f1": 1.0,
+          "mean_matched_iou": 0.9967486195591603,
+          "max_matched_score_drift": 0.0018633604049682617,
+          "finite": true,
+          "passed": true,
+          "raw_outputs_finite": true
+        },
+        {
+          "reference_detections": 20,
+          "candidate_detections": 20,
+          "matched_detections": 20,
+          "preservation_f1": 1.0,
+          "mean_matched_iou": 0.9967486195591603,
+          "max_matched_score_drift": 0.0018633604049682617,
+          "finite": true,
+          "passed": true,
+          "raw_outputs_finite": true
+        },
+        {
+          "reference_detections": 20,
+          "candidate_detections": 20,
+          "matched_detections": 20,
+          "preservation_f1": 1.0,
+          "mean_matched_iou": 0.9967486195591603,
+          "max_matched_score_drift": 0.0018633604049682617,
+          "finite": true,
+          "passed": true,
+          "raw_outputs_finite": true
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "model": "SSDLite320 MobileNetV3 Large COCO_V1",
+    "weights_sha256": "a79551df90c79834bcd3bb3845ef9d966b5449a3a9b2833ae8404778ca5d65d2",
+    "weights_source": "https://download.pytorch.org/models/ssdlite320_mobilenet_v3_large_coco-a79551df.pth",
+    "frames": [
+      {
+        "image": "frame-00000.jpg",
+        "sha256": "c357fcb81d277198b97e5d6a23e7128496ac3fc438896850aa2f1e41edb52073"
+      },
+      {
+        "image": "frame-00500.jpg",
+        "sha256": "47a376f2cb9bd08ce7987cfe31e554b185c2aa1244ee9db8d835ca406a77e45b"
+      },
+      {
+        "image": "frame-01000.jpg",
+        "sha256": "faa177fa1c08952fc3e9dac281e1ddb722196b50ea7b782cf745c81f0e239d81"
+      },
+      {
+        "image": "frame-01500.jpg",
+        "sha256": "06b17ae26d46e443e5c17dee0c2fb3d1b7d551b1b2d895049ae9b4bd5811720f"
+      }
+    ],
+    "source_url": "https://www.pexels.com/video/people-walking-on-a-street-5365843/",
+    "author": "CityXcape",
+    "license_url": "https://www.pexels.com/license/",
+    "attribution": "projects/perception-replay/ATTRIBUTION.md"
+  },
+  "comparison_definition": "All-class detections score >=0.3; greedy same-class IoU >=0.9 matching against FP32 outputs of same batch. Gate requires finite outputs, nonempty reference and preservation F1 >=0.95 in every trial. This is output preservation, not annotated task accuracy.",
+  "scope": "Frozen pretrained model, 4 correlated frames from one licensed video. GPU-resident input tensors; detection transform and postprocessing included, image decode, host-to-device transfer and loading excluded. CUDA-event duration can include CPU launch gaps; synchronized wall medians also retained. Memory is total PyTorch peak allocated, not total GPU memory. Laptop power/thermal/background processes can affect results.",
+  "profile": {
+    "summary": "profile/operators.json",
+    "cuda_event_count": 4992,
+    "instrumented": true
+  }
+}

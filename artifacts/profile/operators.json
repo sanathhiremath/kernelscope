@@ -1,0 +1,328 @@
+{
+  "version": "0.1",
+  "created_at": "2026-10-29T08:12:12.983863+00:00",
+  "torch_version": "2.9.0+cu126",
+  "cuda_runtime": "12.6",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "iterations": 3,
+  "warmup": 2,
+  "requested_activities": [
+    "CPU",
+    "CUDA"
+  ],
+  "cuda_inputs": true,
+  "cuda_event_count": 4992,
+  "device_events_observed": true,
+  "sort_metric": "self_device_us",
+  "operator_groups_total": 1885,
+  "top_operators": [
+    {
+      "operator": "KernelScope inference",
+      "input_shapes": [],
+      "calls": 3,
+      "self_cpu_us": 0,
+      "total_cpu_us": 0,
+      "self_device_us": 275213.029,
+      "total_device_us": 275213.029,
+      "self_cpu_memory_bytes": 0,
+      "self_device_memory_bytes": 0
+    },
+    {
+      "operator": "torchvision::nms",
+      "input_shapes": [
+        [
+          11570,
+          4
+        ],
+        [
+          11570
+        ],
+        []
+      ],
+      "calls": 3,
+      "self_cpu_us": 328.29999999993015,
+      "total_cpu_us": 26310.300000000003,
+      "self_device_us": 22245.843999999997,
+      "total_device_us": 22565.558999999936,
+      "self_cpu_memory_bytes": 0,
+      "self_device_memory_bytes": -51270144
+    },
+    {
+      "operator": "_ZN6vision3ops51_GLOBAL__N__e3f0a7ae_13_nms_kernel_cu_383643ff_166021gather_keep_from_maskEPbPKyi",
+      "input_shapes": [],
+      "calls": 3,
+      "self_cpu_us": 0,
+      "total_cpu_us": 0,
+      "self_device_us": 17826.498999999996,
+      "total_device_us": 17826.498999999996,
+      "self_cpu_memory_bytes": 0,
+      "self_device_memory_bytes": 0
+    },
+    {
+      "operator": "_ZN6vision3ops51_GLOBAL__N__e3f0a7ae_13_nms_kernel_cu_383643ff_166015nms_kernel_implIfEEvidPKT_Py",
+      "input_shapes": [],
+      "calls": 3,
+      "self_cpu_us": 0,
+      "total_cpu_us": 0,
+      "self_device_us": 4419.345000000001,
+      "total_device_us": 4419.345000000001,
+      "self_cpu_memory_bytes": 0,
+      "self_device_memory_bytes": 0
+    },
+    {
+      "operator": "aten::nonzero",
+      "input_shapes": [
+        [
+          3234
+        ]
+      ],
+      "calls": 540,
+      "self_cpu_us": 18938.499999999316,
+      "total_cpu_us": 64207.69999999981,
+      "self_device_us": 3709.785999999258,
+      "total_device_us": 3709.785999999258,
+      "self_cpu_memory_bytes": 0,
+      "self_device_memory_bytes": 0
+    },
+    {
+      "operator": "_ZN2at6native18radixSortKVInPlaceILin2ELin1ELi32ELi32EfxjEEvNS_4cuda6detail10TensorInfoIT3_T5_EES6_S6_S6_NS4_IT4_S6_EES6_b",
+      "input_shapes": [],
+      "calls": 111,
+      "self_cpu_us": 0,
+      "total_cpu_us": 0,
+      "self_device_us": 2317.8649999999834,
+      "total_device_us": 2317.8649999999834,
+      "self_cpu_memory_bytes": 0,
+      "self_device_memory_bytes": 0
+    },
+    {
+      "operator": "_ZN2at6native6sbtopk10gatherTopKIfjLi1ELb0EEEvNS_4cuda6detail10TensorInfoIKT_T0_EES8_S8_bS8_S8_NS5_IS6_S8_EES8_NS5_IxS8_EES8_PS6_",
+      "input_shapes": [],
+      "calls": 222,
+      "self_cpu_us": 0,
+      "total_cpu_us": 0,
+      "self_device_us": 2068.9379999999073,
+      "total_device_us": 2068.9379999999073,
+      "self_cpu_memory_bytes": 0,
+      "self_device_memory_bytes": 0
+    },
+    {
+      "operator": "_ZN5cudnn26bn_fw_inf_1C11_kernel_NCHWIffLb1ELi1EEEvT0_S1_17cudnnTensorStructPKT_S2_PS3_S2_PKS1_S8_S8_S8_S1_",
+      "input_shapes": [],
+      "calls": 210,
+      "self_cpu_us": 0,
+      "total_cpu_us": 0,
+      "self_device_us": 1781.2469999999703,
+      "total_device_us": 1781.2469999999703,
+      "self_cpu_memory_bytes": 0,
+      "self_device_memory_bytes": 0
+    },
+    {
+      "operator": "_ZN14at_cuda_detail3cub28DeviceReduceSingleTileKernelINS0_18DeviceReducePolicyIiyN4cuda3std3__44plusIvEEE9Policy600ENS0_22TransformInputIteratorIbN2at6native43_GLOBAL__N__95275a52_10_Nonzero_cu_cba1aaa09NonZeroOpIbEEPKbxEEPiyS7_iiNS5_10__identityEEEvT0_T1_T2_T3_T4_T6_",
+      "input_shapes": [],
+      "calls": 540,
+      "self_cpu_us": 0,
+      "total_cpu_us": 0,
+      "self_device_us": 1324.094999999681,
+      "total_device_us": 1324.094999999681,
+      "self_cpu_memory_bytes": 0,
+      "self_device_memory_bytes": 0
+    },
+    {
+      "operator": "_ZN14at_cuda_detail3cub23DeviceSelectSweepKernelINS0_6detail24device_select_policy_hubIxbiLb0ELb0EE9Policy900ENS0_21CountingInputIteratorIxxEENS0_22TransformInputIteratorIbN2at6native43_GLOBAL__N__95275a52_10_Nonzero_cu_cba1aaa09NonZeroOpIbEEPKbxEEPxPiNS0_13ScanTileStateIiLb1EEENS0_8NullTypeESL_iLb0EEEvT0_T1_T2_T3_T4_T5_T6_T7_iNS2_7vsmem_tE",
+      "input_shapes": [],
+      "calls": 543,
+      "self_cpu_us": 0,
+      "total_cpu_us": 0,
+      "self_device_us": 1267.282999999552,
+      "total_device_us": 1267.282999999552,
+      "self_cpu_memory_bytes": 0,
+      "self_device_memory_bytes": 0
+    },
+    {
+      "operator": "_ZN2at6native24vectorized_gather_kernelILi16ExEEvPcS2_PT0_ixxxxb",
+      "input_shapes": [],
+      "calls": 438,
+      "self_cpu_us": 0,
+      "total_cpu_us": 0,
+      "self_device_us": 1107.637999999817,
+      "total_device_us": 1107.637999999817,
+      "self_cpu_memory_bytes": 0,
+      "self_device_memory_bytes": 0
+    },
+    {
+      "operator": "_ZN2at6native51_GLOBAL__N__67b3c33b_18_DepthwiseConv2d_cu_2ee6150b31conv_depthwise2d_forward_kernelILi3EfiEEvNS_27GenericPackedTensorAccessorIKT0_Ly4ENS_16DefaultPtrTraitsEiEENS3_IS4_Ly4ES6_iEES7_NS3_IS5_Ly1ES6_iEEbT1_iiiiiiiiiiiiii",
+      "input_shapes": [],
+      "calls": 75,
+      "self_cpu_us": 0,
+      "total_cpu_us": 0,
+      "self_device_us": 1089.74999999994,
+      "total_device_us": 1089.74999999994,
+      "self_cpu_memory_bytes": 0,
+      "self_device_memory_bytes": 0
+    },
+    {
+      "operator": "aten::gt",
+      "input_shapes": [
+        [
+          3234
+        ],
+        []
+      ],
+      "calls": 270,
+      "self_cpu_us": 5627.400000000394,
+      "total_cpu_us": 9200.400000000074,
+      "self_device_us": 873.7759999999034,
+      "total_device_us": 873.7759999999034,
+      "self_cpu_memory_bytes": 0,
+      "self_device_memory_bytes": 967680
+    },
+    {
+      "operator": "_ZN2at6native18elementwise_kernelILi128ELi4EZNS0_22gpu_kernel_impl_nocastIZNS0_21compare_scalar_kernelIfEEvRNS_18TensorIteratorBaseENS0_50_GLOBAL__N__3a2b9ae4_17_CompareKernels_cu_8f1b29aa6OpTypeET_EUlfE_EEvS5_RKS8_EUliE_EEviT1_",
+      "input_shapes": [],
+      "calls": 270,
+      "self_cpu_us": 0,
+      "total_cpu_us": 0,
+      "self_device_us": 873.7759999999034,
+      "total_device_us": 873.7759999999034,
+      "self_cpu_memory_bytes": 0,
+      "self_device_memory_bytes": 0
+    },
+    {
+      "operator": "_ZN2at6native24index_elementwise_kernelILi128ELi4EZNS0_16gpu_index_kernelIZNS0_17index_kernel_implINS0_10OpaqueTypeILi4EEEEEvRNS_18TensorIteratorBaseEN3c108ArrayRefIxEESA_EUlPcPKcxE_EEvS7_SA_SA_RKT_bEUliE_EEvxT1_",
+      "input_shapes": [],
+      "calls": 237,
+      "self_cpu_us": 0,
+      "total_cpu_us": 0,
+      "self_device_us": 803.3150000000824,
+      "total_device_us": 803.3150000000824,
+      "self_cpu_memory_bytes": 0,
+      "self_device_memory_bytes": 0
+    },
+    {
+      "operator": "_ZN2at6native29vectorized_elementwise_kernelILi4EZZZNS0_49_GLOBAL__N__97375e57_16_TensorCompare_cu_71e06f4e19launch_clamp_scalarERNS_18TensorIteratorBaseEN3c106ScalarES6_NS0_6detail11ClampLimitsEENKUlvE_clEvENKUlvE5_clEvEUlfE_St5arrayIPcLy2EEEEviT0_T1_",
+      "input_shapes": [],
+      "calls": 135,
+      "self_cpu_us": 0,
+      "total_cpu_us": 0,
+      "self_device_us": 779.3090000000302,
+      "total_device_us": 779.3090000000302,
+      "self_cpu_memory_bytes": 0,
+      "self_device_memory_bytes": 0
+    },
+    {
+      "operator": "aten::index",
+      "input_shapes": [
+        [
+          3234
+        ],
+        []
+      ],
+      "calls": 270,
+      "self_cpu_us": 5986.100000000697,
+      "total_cpu_us": 45580.70000000038,
+      "self_device_us": 763.4110000001019,
+      "total_device_us": 2639.4839999998803,
+      "self_cpu_memory_bytes": 0,
+      "self_device_memory_bytes": -427008
+    },
+    {
+      "operator": "aten::index",
+      "input_shapes": [
+        [
+          3234,
+          4
+        ],
+        []
+      ],
+      "calls": 270,
+      "self_cpu_us": 5769.299999999908,
+      "total_cpu_us": 40434.000000000015,
+      "self_device_us": 631.2090000000171,
+      "total_device_us": 2464.9219999994966,
+      "self_cpu_memory_bytes": 0,
+      "self_device_memory_bytes": 873984
+    },
+    {
+      "operator": "_ZN14at_cuda_detail3cub23DeviceCompactInitKernelINS0_13ScanTileStateIiLb1EEEPiEEvT_iT0_",
+      "input_shapes": [],
+      "calls": 543,
+      "self_cpu_us": 0,
+      "total_cpu_us": 0,
+      "self_device_us": 589.7350000000661,
+      "total_device_us": 589.7350000000661,
+      "self_cpu_memory_bytes": 0,
+      "self_device_memory_bytes": 0
+    },
+    {
+      "operator": "_ZN7cutlass7Kernel2I51cutlass_80_tensorop_s1688gemm_128x64_16x6_nn_align4EEvNT_6ParamsE",
+      "input_shapes": [],
+      "calls": 33,
+      "self_cpu_us": 0,
+      "total_cpu_us": 0,
+      "self_device_us": 563.3090000000175,
+      "total_device_us": 563.3090000000175,
+      "self_cpu_memory_bytes": 0,
+      "self_device_memory_bytes": 0
+    },
+    {
+      "operator": "Memcpy DtoH (Device -> Pinned)",
+      "input_shapes": [],
+      "calls": 543,
+      "self_cpu_us": 0,
+      "total_cpu_us": 0,
+      "self_device_us": 545.6319999999905,
+      "total_device_us": 545.6319999999905,
+      "self_cpu_memory_bytes": 0,
+      "self_device_memory_bytes": 0
+    },
+    {
+      "operator": "_ZN7cutlass7Kernel2I50cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4EEvNT_6ParamsE",
+      "input_shapes": [],
+      "calls": 33,
+      "self_cpu_us": 0,
+      "total_cpu_us": 0,
+      "self_device_us": 449.99499999999534,
+      "total_device_us": 449.99499999999534,
+      "self_cpu_memory_bytes": 0,
+      "self_device_memory_bytes": 0
+    },
+    {
+      "operator": "_ZN2at6native51_GLOBAL__N__67b3c33b_18_DepthwiseConv2d_cu_2ee6150b31conv_depthwise2d_forward_kernelILi5EfiEEvNS_27GenericPackedTensorAccessorIKT0_Ly4ENS_16DefaultPtrTraitsEiEENS3_IS4_Ly4ES6_iEES7_NS3_IS5_Ly1ES6_iEEbT1_iiiiiiiiiiiiii",
+      "input_shapes": [],
+      "calls": 18,
+      "self_cpu_us": 0,
+      "total_cpu_us": 0,
+      "self_device_us": 418.4730000000309,
+      "total_device_us": 418.4730000000309,
+      "self_cpu_memory_bytes": 0,
+      "self_device_memory_bytes": 0
+    },
+    {
+      "operator": "_ZN2at6native20bitonicSortKVInPlaceILin2ELin1ELi16ELi16EfxNS0_4GTOpIfLb1EEEjEEvNS_4cuda6detail10TensorInfoIT3_T6_EES8_S8_S8_NS6_IT4_S8_EES8_T5_",
+      "input_shapes": [],
+      "calls": 60,
+      "self_cpu_us": 0,
+      "total_cpu_us": 0,
+      "self_device_us": 320.6140000000232,
+      "total_device_us": 320.6140000000232,
+      "self_cpu_memory_bytes": 0,
+      "self_device_memory_bytes": 0
+    },
+    {
+      "operator": "_ZN2at6native18radixSortKVInPlaceILin2ELin1ELi32ELi4EfxjEEvNS_4cuda6detail10TensorInfoIT3_T5_EES6_S6_S6_NS4_IT4_S6_EES6_b",
+      "input_shapes": [],
+      "calls": 45,
+      "self_cpu_us": 0,
+      "total_cpu_us": 0,
+      "self_device_us": 308.1989999999132,
+      "total_device_us": 308.1989999999132,
+      "self_cpu_memory_bytes": 0,
+      "self_device_memory_bytes": 0
+    }
+  ],
+  "trace_file": "trace.json",
+  "summary_file": "operators.json",
+  "warnings": [],
+  "scope": "Instrumented inference with resident inputs. Profiling overhead invalidates comparisons with uninstrumented benchmark latency. Operator totals may include nested work and are not additive. Memory columns are allocation deltas, not process VRAM or peak memory. No preprocessing, transfers, hardware counters, occupancy, or task-accuracy measurements."
+}
